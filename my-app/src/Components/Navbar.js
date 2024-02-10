@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   return (
-    <nav
-      className={`navbar navbar-expand-lg navbar-${props.mode}  bg-${props.mode}`}
+    <nav style={{boxShadow:props.mode==="dark"?"inset 0 0 7px white":"inset 0 0 7px black"}}
+      className={`navbar navbar-expand-lg navbar-${props.mode}  bg-${props.mode} border border-dark`}
     >
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
@@ -50,19 +50,6 @@ export default function Navbar(props) {
               DarkMode
             </label>
           </div>
-
-          {/* Search Button */}
-          <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-primary" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
