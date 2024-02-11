@@ -5,7 +5,7 @@ import TextForm from "./Components/TextForm";
 import About from "./Components/About";
 import React, { useState } from "react";
 import Alert from "./Components/Alert";
-
+import Footer from "./Components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -29,12 +29,10 @@ function App() {
       setMode(`dark`);
       document.body.style.backgroundColor = "#020334";
       showAlert(`Dark mode has been enabled`, "success");
-      // document.title = "TextUtils - Dark Mode";
     } else {
       setMode(`light`);
       document.body.style.backgroundColor = "white";
       showAlert(`Light mode has been enabled`, "success");
-      // document.title = "TextUtils - Light Mode";
     }
   };
 
@@ -42,7 +40,7 @@ function App() {
     <>
       <BrowserRouter>
         <Navbar
-          title="TextUtils"
+          title="TextCraft"
           aboutText="About Us"
           mode={mode}
           toggleMode={toggleMode}
@@ -59,12 +57,13 @@ function App() {
               element={
                 <TextForm
                   showAlert={showAlert}
-                  heading=" Try TextUtils - Word Counter, Character Counter,Remove extra spaces"
+                  heading=" Try TextCraft - Word Counter, Character Counter,Remove extra spaces,encrypt or decrypt the text"
                   mode={mode}/>
               }
             />
           </Routes>
         </div>
+        <Footer mode={mode}/>
       </BrowserRouter>
     </>
   );

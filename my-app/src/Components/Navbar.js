@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Navbar(props) {
   return (
     <nav style={{boxShadow:props.mode==="dark"?"inset 0 0 7px white":"inset 0 0 7px black"}}
-      className={`navbar navbar-expand-lg navbar-${props.mode}  bg-${props.mode} border border-dark`}
+      className={`navbar navbar-expand-lg navbar-${props.mode}  bg-${props.mode} border border-dark position-fixed top-0 w-100`}
     >
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
@@ -42,7 +42,14 @@ export default function Navbar(props) {
               props.mode === "light" ? "dark" : "light"
             } mx-2`}
           >
-            <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+            <input
+  className="form-check-input"
+  onClick={props.toggleMode}
+  type="checkbox"
+  role="switch"
+  id="flexSwitchCheckDefault"
+  aria-checked={props.switchState ? "true" : "false"}
+/>
             <label
               className="form-check-label"
               htmlFor="flexSwitchCheckDefault"

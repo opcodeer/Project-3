@@ -12,7 +12,7 @@ export default function About(props) {
         borderColor: props.mode === 'dark'?'white':"#42743"
     }
   return (
-    <div className='container'>
+    <div className='container' style={{minHeight:"83.5vh"}}>
         <h1 className="my-3" style={{color: props.mode === 'dark'?'white':"black"}}>About Us</h1>
       <div className="accordion" id="accordionExample" style={myStyle}>
   <div className="accordion-item">
@@ -47,7 +47,7 @@ export default function About(props) {
     </h2>
     <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div className="accordion-body" style={myStyle}>
-        This word counter software works in any web vrwsers such as Chrome,Firefox,Interntet Explorer,safari,opera. It suits to count characters in facebook,blog books,excel docunemt,pdf document,essays etc.
+        This word counter software works in any web vrwsers such as Chrome,Firefox,Internet Explorer,safari,opera. It suits to count characters in facebook,blog books,excel docunemt,pdf document,essays etc.
       </div>
     </div>
   </div>

@@ -60,13 +60,13 @@ export default function TextForm(props) {
         <div className="mb-3">
           <textarea className="form-control" value={text} onChange={handleUpchange} style={{ backgroundColor: props.mode === 'dark' ? '#13466e' : 'white', color: props.mode === 'dark' ? 'white' : '#042743', border: props.mode === "dark" ? "7px solid white" : "7px solid black", boxShadow: props.mode === "dark" ? "0 0 10px white" : "0 0 10px black" }} rows="18"></textarea>
         </div>
-        <button disabled={text.length === 0} className="btn btn-primary my-3 mx-2" onClick={handleUpclick}>Convert to Uppercase</button>
-        <button disabled={text.length === 0} className="btn btn-primary my-3 mx-2" onClick={handleLoclick}>Convert to Lowercase</button>
-        <button disabled={text.length === 0} className="btn btn-primary my-3 mx-2" onClick={handleClearclick}>Clear Text</button>
-        <button disabled={text.length === 0} className="btn btn-primary my-3 mx-2" onClick={handleCopytext}>Copy Text</button>
-        <button disabled={text.length === 0} className="btn btn-primary my-3 mx-2" onClick={handleExtraspaces}>Remove Extra Spaces</button>
-        <button disabled={text.length === 0 || isEncrypted} className="btn btn-primary my-3 mx-2" onClick={encryptText}>Encrypt</button>
-        <button disabled={text.length === 0 || !isEncrypted} className="btn btn-primary my-3 mx-2" onClick={decryptText}>Decrypt</button>
+        <button disabled={text.length === 0} className="btn btn-primary my-3 mx-2" style={{boxShadow:props.mode==="dark"?"0 0 5px white":"0 0 5px black"}} onClick={handleUpclick}>Convert to Uppercase</button>
+        <button disabled={text.length === 0} className="btn btn-primary my-3 mx-2" style={{boxShadow:props.mode==="dark"?"0 0 5px white":"0 0 5px black"}} onClick={handleLoclick}>Convert to Lowercase</button>
+        <button disabled={text.length === 0} className="btn btn-primary my-3 mx-2" style={{boxShadow:props.mode==="dark"?"0 0 5px white":"0 0 5px black"}} onClick={handleClearclick}>Clear Text</button>
+        <button disabled={text.length === 0} className="btn btn-primary my-3 mx-2" style={{boxShadow:props.mode==="dark"?"0 0 5px white":"0 0 5px black"}} onClick={handleCopytext}>Copy Text</button>
+        <button disabled={text.length === 0} className="btn btn-primary my-3 mx-2" style={{boxShadow:props.mode==="dark"?"0 0 5px white":"0 0 5px black"}} onClick={handleExtraspaces}>Remove Extra Spaces</button>
+        <button disabled={text.length === 0 || isEncrypted} className="btn btn-primary my-3 mx-2" style={{boxShadow:props.mode==="dark"?"0 0 5px white":"0 0 5px black"}} onClick={encryptText}>Encrypt</button>
+        <button disabled={text.length === 0 || !isEncrypted} className="btn btn-primary my-3 mx-2" style={{boxShadow:props.mode==="dark"?"0 0 5px white":"0 0 5px black"}} onClick={decryptText}>Decrypt</button>
       </div>
       <div className="container" style={{ color: props.mode === 'dark' ? 'white' : '#042743' }}>
         <h1>Your text summary</h1>
